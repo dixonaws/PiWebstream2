@@ -16,6 +16,7 @@ PAGE="""\
 <body>
 <h1>PiCamera MJPEG Streaming Demo</h1>
 <img src="stream.mjpg" width="640" height="480" />
+<img src="videostill.jpg" width="640" height="480" />
 </body>
 </html>
 """
