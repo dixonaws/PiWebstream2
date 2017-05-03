@@ -6,6 +6,7 @@ import logging
 import socketserver
 from threading import Condition
 from http import server
+import netifaces as ni
 
 
 PAGE="""\
@@ -81,8 +82,12 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     allow_reuse_address = True
     daemon_threads = True
 
+
+ni.ifaddresses('eth0')
+ip = ni.ifaddresses('eth0')[2][0]['addr']
+
 with picamera.PiCamera(resolution='800x600', framerate=1) as camera:
-    print("Visit my IP on port 8000 to see live video.")
+    print("Visit http://" + ip + ":8000 to see live video from piCamera.")
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
     camera.capture('videostill.jpg', use_video_port=True)
