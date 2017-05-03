@@ -6,8 +6,7 @@ import logging
 import socketserver
 from threading import Condition
 from http import server
-import netifaces as ni
-
+import socket
 
 PAGE="""\
 <html>
@@ -83,11 +82,12 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 # get the IP of the local host
-ni.ifaddresses('eth0')
-ip = ni.ifaddresses('eth0')[2][0]['addr']
+
+print([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1])
+myip = [ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1]
 
 with picamera.PiCamera(resolution='800x600', framerate=24) as camera:
-    print("Visit http://" + ip + ":8000 to see live video from piCamera.")
+    print("Visit http://" + myip + ":8000 to see live video from piCamera.")
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
     camera.capture('videostill.jpg', use_video_port=True)
