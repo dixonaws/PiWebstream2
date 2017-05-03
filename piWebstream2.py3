@@ -6,7 +6,9 @@ import logging
 import socketserver
 from threading import Condition
 from http import server
-import socket
+import datetime as dt
+import boto3
+import os
 
 PAGE="""\
 <html>
@@ -84,13 +86,26 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
 # get the IP of the local host
 myip="192.168.0.0"
 
+# instantiate an S3 object so that we can upload files
+s3=boto3.client('s3')
+
+# our S3 bucket name
+bucket_name='piphotorecognition'
+
+
+
+
 with picamera.PiCamera(resolution='800x600', framerate=30) as camera:
     print("Visit http://" + myip + ":8000 to see live video from piCamera.")
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
-    camera.capture('videostill.jpg', use_video_port=True)
-    camera.capture('videostill2.jpg', use_video_port=True)
-    camera.wait_recording(10)
+    timestamp = dt.datetime.now().strftime('%m-%d-%Y-%H:%M:%S')
+
+    videostillfilename='videostill_' + timestamp + '.jpg'
+    camera.capture(videostillfilename, use_video_port=True)
+    print('Captured image: ' + videostillfilename)
+
+    camera.wait_recording(5)
    
     try:
         address = ('', 8000)
