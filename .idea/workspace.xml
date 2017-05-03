@@ -18,8 +18,8 @@
       <file leaf-file-name="piWebstream2.py3" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piWebstream2.py3">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+            <state relative-caret-position="287">
+              <caret line="85" column="70" lean-forward="false" selection-start-line="85" selection-start-column="70" selection-end-line="85" selection-end-column="70" />
               <folding>
                 <element signature="e#20#29#0" expanded="true" />
               </folding>
@@ -52,8 +52,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="23" />
+    <option name="x" value="80" />
+    <option name="y" value="43" />
     <option name="width" value="1289" />
     <option name="height" value="753" />
   </component>
@@ -146,11 +146,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493771442030</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added ip of eth0 to console message">
+      <created>1493772643360</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1493772643360</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="23" width="1289" height="753" extended-state="0" />
+    <frame x="80" y="43" width="1289" height="753" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24592708" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -212,8 +219,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piWebstream2.py3">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="89" column="22" lean-forward="true" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+        <state relative-caret-position="287">
+          <caret line="85" column="70" lean-forward="false" selection-start-line="85" selection-start-column="70" selection-end-line="85" selection-end-column="70" />
           <folding>
             <element signature="e#20#29#0" expanded="true" />
           </folding>
