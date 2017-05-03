@@ -84,6 +84,11 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
 # get the IP of the local host
 myip="192.168.0.0"
 
+camera0=picamera.PiCamera(resolution='800x600', framerate=30)
+camera0.start_recording()
+camera0.capture('anotherstill.jpg', use_video_port=True)
+camera0.stop_recording()
+
 with picamera.PiCamera(resolution='800x600', framerate=30) as camera:
     print("Visit http://" + myip + ":8000 to see live video from piCamera.")
     output = StreamingOutput()
