@@ -85,7 +85,7 @@ with picamera.PiCamera(resolution='800x600', framerate=1) as camera:
     print("Visit my IP on port 8000 to see live video.")
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
-    camera.capture('/videostill.jpg', use_video_port=True)
+    camera.capture('videostill.jpg', use_video_port=True)
     camera.wait_recording(10)
    
     try:
