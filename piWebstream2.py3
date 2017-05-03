@@ -82,11 +82,11 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     allow_reuse_address = True
     daemon_threads = True
 
-
+# get the IP of the local host
 ni.ifaddresses('eth0')
 ip = ni.ifaddresses('eth0')[2][0]['addr']
 
-with picamera.PiCamera(resolution='800x600', framerate=1) as camera:
+with picamera.PiCamera(resolution='800x600', framerate=24) as camera:
     print("Visit http://" + ip + ":8000 to see live video from piCamera.")
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
