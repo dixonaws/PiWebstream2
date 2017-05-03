@@ -82,8 +82,7 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 # get the IP of the local host
-
-print([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2]))
+myip="192.168.0.0"
 
 with picamera.PiCamera(resolution='800x600', framerate=24) as camera:
     print("Visit http://" + myip + ":8000 to see live video from piCamera.")
