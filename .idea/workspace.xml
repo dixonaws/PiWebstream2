@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5424d026-aac6-46e1-ae1a-22cb5200e5d4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PiWebstream2.iml" afterPath="$PROJECT_DIR$/.idea/PiWebstream2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/piWebstream2.py3" afterPath="$PROJECT_DIR$/piWebstream2.py3" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493508237483</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added ip of eth0 to console message">
+      <created>1493771398998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493771398998</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -168,7 +173,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed framerate to 1 frame/sec" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed framerate to 1 frame/sec" />
+    <MESSAGE value="Added ip of eth0 to console message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ip of eth0 to console message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
